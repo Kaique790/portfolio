@@ -1,0 +1,13 @@
+@use './header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100vw;
+    font-family: 'Poppins';
+}

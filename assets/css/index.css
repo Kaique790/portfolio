@@ -1,0 +1,227 @@
+header::-webkit-scrollbar {
+  width: 0px;
+}
+
+header {
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  height: 150px;
+  padding-block: 50px;
+  position: relative;
+}
+header .logo::before {
+  content: "";
+  background-color: #ffffff;
+  height: 80px;
+  width: 80px;
+  top: 22%;
+  left: 32%;
+  z-index: 1;
+  position: absolute;
+  border-radius: 100%;
+}
+header .logo::after {
+  content: "K";
+  color: black;
+  font-size: 6rem;
+  font-weight: bold;
+  width: 80px;
+  top: 10%;
+  left: 38%;
+  z-index: 1;
+  position: absolute;
+  border-radius: 100%;
+}
+header ul.my-links {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px 10px;
+  gap: 5px;
+}
+header ul.my-links li:first-child a {
+  padding: 10px;
+}
+header ul.my-links li:first-child a img {
+  height: 20px;
+}
+header ul.my-links li:nth-child(4) a {
+  padding: 6px;
+}
+header ul.my-links li:nth-child(4) a img {
+  height: 27px;
+}
+header ul.my-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5271ff;
+  border-radius: 4px;
+  padding: 1px;
+}
+header ul.my-links li a img {
+  height: 37px;
+}
+header nav {
+  scrollbar-width: none;
+  margin-top: 10px;
+  height: 100%;
+}
+header nav ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  font-size: 1.2rem;
+  gap: 30px;
+}
+header nav ul li {
+  padding-block: 18px;
+  padding-inline: 50px;
+  transition: all 0.5s;
+}
+header nav ul li a {
+  min-width: 153px;
+  color: #000000;
+  text-decoration: none;
+  gap: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+header nav ul .section-active {
+  padding-inline: 40px;
+  border-left: 20px solid #5271ff;
+  background: #fff;
+  color: blue;
+}
+header nav ul li a i {
+  font-size: 30px;
+}
+header .btn-toggle {
+  display: none;
+}
+
+@media (width <= 728px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    max-height: 70px;
+  }
+  header ul.my-links {
+    gap: 5%;
+    margin-left: 20px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  header ul.my-links a {
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+  }
+  header ul.my-links a img {
+    width: 25px;
+  }
+  header .logo {
+    background: black;
+    position: relative;
+    top: -40px;
+    width: 100px;
+  }
+  header .logo::before {
+    background-color: #d9d9d9;
+    height: 50px;
+    width: 50px;
+    top: 90px;
+    left: 20%;
+  }
+  header .logo::after {
+    color: #000000;
+    font-size: 4rem;
+    top: 70px;
+    left: 25px;
+  }
+  header nav {
+    right: -100%;
+    overflow-y: scroll;
+    position: fixed;
+    margin-top: 0;
+    background-color: #ffffff;
+    top: 0;
+    height: 100dvh;
+    width: 100%;
+    z-index: 99;
+    transition: right 0.5s;
+  }
+  header nav ul {
+    justify-content: center;
+    align-items: center;
+  }
+  header nav.active-nav {
+    right: 0;
+  }
+  header .btn-toggle {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    display: inline;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+  header .btn-toggle .row {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: 5px auto;
+    transform-origin: center;
+    transition: ease-in 0.3s;
+  }
+  header .btn-toggle.show-nav .row:nth-child(1) {
+    width: 30px;
+    transform: translatey(8px) rotate(-45deg);
+  }
+  header .btn-toggle.show-nav .row:nth-child(3) {
+    width: 30px;
+    transform: translatey(-5px) rotate(45deg);
+  }
+  header .btn-toggle.show-nav .row:nth-child(2) {
+    width: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  width: 100vw;
+  font-family: "Poppins";
+}
+
+/*# sourceMappingURL=index.css.map */
