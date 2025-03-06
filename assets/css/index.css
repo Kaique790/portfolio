@@ -10,9 +10,6 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: #d9d9d9;
-  position: fixed;
-  height: 100%;
-  width: 15.625rem;
 }
 header .logo {
   display: flex;
@@ -77,10 +74,9 @@ header nav ul {
   flex-direction: column;
   font-weight: 800;
   font-size: 1.2rem;
-  gap: 1.875rem;
 }
 header nav ul li {
-  padding-block: 1.125rem;
+  padding-block: 1.9rem;
   padding-inline: 3.125rem;
   transition: all 0.5s;
 }
@@ -203,6 +199,28 @@ header .btn-toggle {
     width: 0;
   }
 }
+#home .title {
+  line-height: 1;
+  font-size: 300%;
+  color: #5271ff;
+}
+#home .title span {
+  color: #000000;
+  font-size: 140%;
+}
+#home .subtitle {
+  font-size: clamp(1.25rem, 1vh, 1.5rem);
+  max-width: clamp(2rem, 95vh, 95rem);
+}
+#home section.logo-skills {
+  direction: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .logo-skills img {
+  max-height: 5.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -213,6 +231,21 @@ body {
   height: 100dvh;
   width: 100vw;
   font-family: "Poppins";
+  display: grid;
+  grid-template-columns: 15.625rem 1fr;
+}
+
+main::-webkit-scrollbar {
+  width: 0px;
+}
+
+main {
+  overflow-y: scroll;
+  padding-top: 3rem;
+  padding-left: 3.25rem;
+  min-height: 100dvh;
+  max-width: 100%;
+  scrollbar-width: none;
 }
 
 /*# sourceMappingURL=index.css.map */

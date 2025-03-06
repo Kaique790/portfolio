@@ -1,0 +1,31 @@
+@use "./variables";
+
+#home {
+
+    .title {
+        line-height: 1;
+        font-size: 300%;
+        color: variables.$secondary-color;
+        span {
+            color: variables.$dark-color;
+            font-size: 140%;
+        }
+    }
+
+    .subtitle {
+        font-size: clamp(1.25rem, 1vh, 1.5rem);
+        max-width: clamp(2rem, 95vh, 95rem);
+    }
+
+    section.logo-skills {
+        direction: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-skills {
+        img {
+            max-height: 5.5rem;
+        }
+    }
+}

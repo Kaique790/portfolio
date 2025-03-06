@@ -14,9 +14,6 @@ header {
     align-items: center;
 
     background-color: variables.$primary-color;
-    position: fixed;
-    height: 100%;
-    width: 15.625rem;
 
     & .logo {
         @include variables.flex-center;
@@ -91,10 +88,9 @@ header {
             flex-direction: column;
             font-weight: 800;
             font-size: 1.2rem;
-            gap: 1.875rem;
 
             li {
-                padding-block: 1.125rem;
+                padding-block: 1.9rem;
                 padding-inline: 3.125rem;
                 transition: all 0.5s;
             }
