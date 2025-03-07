@@ -105,16 +105,44 @@ header .btn-toggle {
   display: none;
 }
 
-@media (max-width: 728px) {
+@media (max-width: 1024px) {
+  header {
+    max-width: 6.75rem;
+    min-height: 100dvh;
+  }
+  header ul.my-links {
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  header nav ul {
+    gap: 1.5rem;
+  }
+  header nav ul li {
+    padding-inline: 3rem;
+    padding-block: 1rem;
+  }
+  header nav ul li a {
+    min-width: 1rem;
+  }
+  header nav ul li span {
+    display: none;
+  }
+  header nav ul .section-active {
+    padding-inline: 1.85rem;
+  }
+}
+@media (max-width: 768px) {
   html {
     font-size: 87%;
   }
   header {
+    padding-left: 0;
     display: flex;
     flex-direction: row;
     position: fixed;
     z-index: 999;
-    width: 100%;
+    min-width: 100%;
+    min-height: auto;
     max-height: 4.375rem;
   }
   header ul.my-links {
@@ -160,8 +188,21 @@ header .btn-toggle {
     transition: right 0.5s;
   }
   header nav ul {
+    gap: 4rem;
     justify-content: center;
     align-items: center;
+  }
+  header nav ul li {
+    padding-inline: 3.125rem;
+  }
+  header nav ul li a {
+    min-width: 9.565rem;
+  }
+  header nav ul li span {
+    display: inline;
+  }
+  header nav ul .section-active {
+    padding-inline: 2.5rem;
   }
   header nav.active-nav {
     right: 0;
@@ -246,6 +287,20 @@ main {
   min-height: 100dvh;
   max-width: 100%;
   scrollbar-width: none;
+}
+
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 6.75rem 1fr;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+  main {
+    padding-left: 0rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

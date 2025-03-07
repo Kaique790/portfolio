@@ -127,17 +127,57 @@ header {
     }
 }
 
-@media (max-width: 728px) {
+@media (max-width: 1024px) {
+    header {
+        max-width: 6.75rem;
+        min-height: 100dvh;
+
+        ul.my-links {
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            ul {
+                gap: 1.5rem;
+
+                li {
+                    padding-inline: 3rem;
+                    padding-block: 1rem;
+                    
+                    a {
+                        min-width: 1rem;
+
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                
+                .section-active {
+                    padding-inline: 1.85rem;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
     html {
         font-size: 87%;
     }
 
     header {
+        padding-left: 0;
         display: flex;
         flex-direction: row;
         position: fixed;
         z-index: 999;
-        width: 100%;
+        min-width: 100%;
+        min-height: auto;
         max-height: 4.375rem;
 
         ul.my-links {
@@ -192,8 +232,24 @@ header {
             transition: right .5s;
 
             ul {
+                gap: 4rem;
                 justify-content: center;
                 align-items: center;
+
+                li {
+                    padding-inline: 3.125rem;
+                    a {
+                        min-width: 9.565rem;
+                    }
+
+                    span {
+                        display: inline;
+                    }
+    
+                }
+                .section-active {
+                    padding-inline: 2.5rem;
+                }
             }
         }
 
