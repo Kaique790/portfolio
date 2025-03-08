@@ -10,13 +10,16 @@
 body {
     height: 100dvh;
     width: 100vw;
+    max-width: 100%;
     font-family: 'Poppins';
     display: grid;
     grid-template-columns: 15.625rem 1fr;
+    
+    scrollbar-width: 0;
 }
 
-main::-webkit-scrollbar {
-    width: 0px;
+body::-webkit-scrollbar {
+    width: 0;
 }
 
 main {
@@ -24,9 +27,6 @@ main {
     padding-top: 3rem;
     padding-left: 3.25rem;
     min-height: 100dvh;
-    max-width: 100%;
-
-    scrollbar-width: none;
 }
 
 @media (max-width: 1024px) {
@@ -37,11 +37,16 @@ main {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 87%;
+    }
+
     body {
         display: block;
     }
 
     main {
-        padding-left: 0rem;
+        padding: 2rem;
+        padding-top: 7.5rem;
     }
 }
