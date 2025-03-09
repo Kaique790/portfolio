@@ -239,6 +239,14 @@ header .btn-toggle {
     width: 0;
   }
 }
+@keyframes autoRun {
+  from {
+    right: 100%;
+  }
+  to {
+    right: -10vw;
+  }
+}
 #home .title {
   line-height: 1;
   font-size: 275%;
@@ -254,11 +262,16 @@ header .btn-toggle {
   max-width: clamp(2rem, 95vw, 45rem);
 }
 #home section.logo-skills {
+  scrollbar-width: none;
+  max-width: 100%;
+  overflow-y: scroll;
   gap: 0.75rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 #home section.logo-skills img {
+  right: 10%;
   max-height: 6rem;
 }
 #home .skills-container {
@@ -301,6 +314,11 @@ header .btn-toggle {
   height: 4rem;
 }
 
+@media (max-width: 890px) {
+  #home .skills-container {
+    gap: 5vw;
+  }
+}
 @media (max-width: 768px) {
   section#home {
     margin: 0 auto;
